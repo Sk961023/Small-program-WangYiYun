@@ -1,1 +1,1 @@
-用Node.js起node app.js
+用Node.js跑代码node app.js

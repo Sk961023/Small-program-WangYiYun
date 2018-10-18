@@ -1,0 +1,20 @@
+/* pages/list/list.wxss */
+page{
+  background: #333;
+}
+.wrap{
+  padding: 20rpx;
+  display: flex;
+}
+.wrap image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.introduce{
+  width: 510rpx;
+  font-size:14px;
+  line-height: 2;
+  color: #fff;
+  text-indent: 50rpx;
+  background-color: #222;
+}

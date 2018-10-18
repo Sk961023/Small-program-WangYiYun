@@ -1,0 +1,28 @@
+<!--pages/play/play.wxml-->
+<wxs module="foo">
+  module.exports = {
+    toStr: function(n){
+      n = Math.floor(n)
+      if(n<10){ 
+        return "0"+ n 
+      }else{
+        return "" + n
+      }
+    },
+
+  }
+</wxs>
+<view>
+  <image class='img' src="{{song.al.picUrl}}" bindtap="tap"></image>
+  <slider bindchanging="changing" bindchange="chang" value="{{current}}" min="0" max="{{duration}}" step='1' block-size='10'></slider>
+</view>
+<view>
+  <text class='now'>{{foo.toStr( current/60 )}}:{{foo.toStr( current%60 )}}</text>
+  <text class='duration'>{{foo.toStr(duration/60)}}:{{foo.toStr(duration%60)}}</text>
+</view>
+<scroll-view class='scroll' scroll-y="true" scroll-into-view="{{currentric}}" scroll-with-animation="true">
+  <view class='box'>
+    <view class='{{currentric === "el-" + index?"white":""}}' wx:for="{{ric}}" id="el-{{index}}" wx:key="{{index}}">{{ric[index]}}</view>
+  </view>
+  
+</scroll-view>
